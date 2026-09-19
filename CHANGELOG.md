@@ -1,5 +1,36 @@
 # CHANGELOG — EXP-0007
 
+## v1.1.0 (2026-09-19) — R14 Reproduction & D1 Bug Verification
+
+### New Tests
+
+- R14 reproduction script (`scripts/run_r14.py`) — full 6-phase validation using project codebase
+- Lightweight validation (`scripts/run_r14_lightweight.py`) — no project codebase needed
+- D1 propagation sign bug confirmed via asymmetric feature counts
+- NCC verification: project Fresnel(z=+1280 call) = independent ASM(z=-1280)
+- QA check: PASS (with warnings)
+- Numerical consistency: all key values tracked across 40+ files
+
+### Key New Findings
+
+- **D1 bug confirmed**: `propagate_fresnel(E0, z=-1280)` → physical z=+1280 → 113 features (R14 result)
+- **D1 bug confirmed**: `propagate_fresnel(E0, z=+1280)` → physical z=-1280 → 47 features
+- R14 result of 113 at z=+1280 is reproducible via `propagate_fresnel(E0, z=-1280)` (exploiting D1 sign flip)
+- NCC(project Fresnel z=+1280 call, ASM z=-1280) = 1.000000 (confirms sign flip)
+- All 91 files committed to git, pushed to GitHub
+
+### Files Created
+
+- `docs/d1-bug-effect.md` — Detailed analysis of propagation sign bug
+- `scripts/run_r14.py` — Updated to 6-phase validation with D1 verification
+- `scripts/run_r14_lightweight.py` — Lightweight validation (D1-aware)
+
+### Files Modified
+
+- `FINAL_OUTPUT.md` — Updated with new test results
+- `README.md` — Updated with D1 bug notes
+- `docs/propagation-implementation.md` — Added D1 effect table and verification
+
 ## v1.0.0 (2026-09-19) — Initial Repository Build
 
 ### Major Changes

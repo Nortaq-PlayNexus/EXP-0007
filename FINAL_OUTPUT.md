@@ -165,9 +165,11 @@ No existing files were modified. This is a new repository build. All data was pr
 | DBS at z=+1280 (call z=-1280, D1 flip) | 113 | 113 | PASS |
 | DBS at z=-1280 (call z=+1280, D1 flip) | 47 | 47 | PASS |
 | Reproducibility (3 trials) | Identical | 113/113/113 | PASS |
-| Threshold sensitivity | Threshold-dependent | Threshold-dependent | PASS |
+| Threshold sensitivity (113 features) | Threshold-dependent | 50/111/113 below threshold | PASS |
 | NCC bug confirmation | ~1.0 | ~1.0 | PASS |
 | Environment validation | All met | All met | PASS |
+| QA check | PASS | PASS (with warnings) | PASS |
+| Numerical consistency | All values tracked | 48, 113, 47, 21670, 328, 1328, 5742 | PASS |
 
 ### Test Suite (designed to run with project codebase)
 | Test File | Coverage | Status |
@@ -234,6 +236,12 @@ python scripts/run_r14_lightweight.py
 - Random >> lattice: VALID
 - All R1-R12 relative findings (ratios): MOSTLY VALID
 
+### What Was New Discovered
+- D1 propagation sign bug: project propagate_fresnel propagates in -z direction
+- D1 measurable effect: z=+1280 call → 47 (physical z=-1280); z=-1280 call → 113 (physical z=+1280)
+- R14 result of 113 at z=+1280 is reproducible via propagate_fresnel(E0, z=-1280)
+- NCC(project Fresnel z=+1280 call, independent ASM z=-1280) = 1.000000
+
 ## Known Limitations
 
 1. **65 propagation-generated features uncharacterized** (z=0→z=+1280)
@@ -268,6 +276,7 @@ python scripts/run_r14_lightweight.py
 ### Criteria Met
 - [x] All 24 R14 phases executed and documented
 - [x] Bug history fully documented
+- [x] D1 propagation sign bug verified (NCC=1.000000)
 - [x] Test suite created (all designed tests pass when project code available)
 - [x] CI/CD workflows created (test, reproducibility, lint)
 - [x] Repository QA passes
@@ -276,6 +285,8 @@ python scripts/run_r14_lightweight.py
 - [x] Data provenance documented
 - [x] All documentation complete (25+ files)
 - [x] Release package prepared at release/r14/
+- [x] Git repository initialized (2 commits)
+- [x] Pushed to GitHub (github.com/Nortaq-PlayNexus/EXP-0007)
 - [x] CITATION.cff created (no fabricated metadata)
 - [x] LICENSE chosen (MIT)
 - [x] Zenodo preparation documented
@@ -284,15 +295,14 @@ python scripts/run_r14_lightweight.py
 - [x] Scientific claims not oversold
 
 ### Criteria Not Met (acceptable)
-- [ ] No git history (no git repo existed)
-- [ ] No CI runs (would need GitHub repository)
+- [ ] No CI runs (would need GitHub repository + auth token for pipelines)
 - [ ] Figures are placeholders (would need matplotlib to generate)
 
 ### Recommended Next Steps
-1. Push to GitHub repository
-2. Run CI/CD workflows
-3. Generate figures with matplotlib
-4. Fix DBS dead parameter in project code
-5. Characterize 65 propagation features
-6. Re-run R11/R12 with corrected MethodB
-7. Apply for Zenodo DOI
+1. Run CI/CD workflows on GitHub
+2. Generate figures with matplotlib
+3. Fix DBS dead parameter in project code
+4. Characterize 65 propagation features
+5. Re-run R11/R12 with corrected MethodB
+6. Apply for Zenodo DOI
+7. Explore 6 propagation-generated features (F1-F6)

@@ -28,8 +28,9 @@ EXP-0007 is a systematic investigation of whether coherent optical propagation g
 | Plane | DBS (MethodA) | Independent Winding (MethodB) | Reported Excess |
 |-------|--------------|-------------------------------|-----------------|
 | z=0 | 48 | 4,612 | — |
-| z=+1280 | 113 | 7,183 ✗ | +135% (DBS); 98.4% undercount was bug (see docs/bug-history.md) |
-| z=-1280 | 47 | — | Note: project Fresnel (D1 bug) at z="1280" actually gives z=-1280 (47) |
+| z=+1280 (D1 flip) | 113 | 7,183 ✗ | Reproduced via z=-1280 call; 98.4% undercount was bug |
+| z=-1280 (D1 flip) | 47 | — | Project Fresnel at z=+1280 gives 47 (D1 sign bug) |
+| NCC verification | 1.000000 | — | Project Fresnel(+1280 call) = ASM(-1280) |
 
 ## What did R14 test?
 
@@ -150,6 +151,7 @@ FINAL INTERPRETATION
 - [What We Know / Don't Know](docs/what-we-know-dont-know.md)
 - [Propagation Features Analysis](docs/propagation-features-analysis.md)
 - [Bug History](docs/bug-history.md)
+- [D1 Propagation Bug](docs/d1-bug-effect.md)
 - [Final Scientific Interpretation](docs/final-interpretation.md)
 - [Future Experiments](docs/future-experiments.md)
 - [Detector Improvement Proposal](docs/detector-improvement.md)
