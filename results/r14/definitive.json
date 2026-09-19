@@ -1,0 +1,8 @@
+{
+  "z0_dbs": 48,
+  "z1280_dbs_project_call_plus": 47,
+  "z1280_dbs_project_call_minus": 113,
+  "reproducible": true,
+  "ncc_sign_bug": "1.000000 (documented)",
+  "dbs_dead_threshold": true
+}
