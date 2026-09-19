@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as follows."
+title: "EXP-0007: Coherent Optical Vortex Propagation — R14 Validation Study"
+version: "1.1.0"
+date-released: 2026-09-19
+author:
+  - family-names: "EXP-0007 Research Team"
+    orcid: ""
+abstract: >
+  Systematic investigation of whether coherent optical propagation generates
+  novel topological vortex structures. After 24 R14 validation phases, the
+  apparent 113-vortex population at z=+1280 is determined to be a reproducible
+  but topologically meaningless artifact of detector behavior, pixel-grid
+  alignment, and propagation/sampling methodology. A double-np.angle software
+  bug invalidated all R13-based MethodB conclusions. A propagation sign bug
+  (D1) produces measurable directional effects. All data, code, validation
+  results, and bug analyses are provided for full reproducibility.
+keywords:
+  - coherent optics
+  - optical vortices
+  - vortex lattice
+  - Fresnel propagation
+  - DeepBeamScan
+  - feature detection
+  - detector artifact
+  - grid-locking
+  - reproducibility
+  - simulation
+  - topological structure
+  - phase singularities
+  - z-sweep
+  - bug verification
+  - D1 propagation bug
+  - double-np.angle
+  - simulation data
+repository-code: "https://github.com/Nortaq-PlayNexus/EXP-0007"
+doi: "10.5281/zenodo.PLACEHOLDER"
+url: "https://doi.org/10.5281/zenodo.PLACEHOLDER"
+license: MIT

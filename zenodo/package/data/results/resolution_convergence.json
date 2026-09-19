@@ -1,0 +1,1 @@
+{"experiment": "R14 Resolution Convergence", "date": "2026-09-19", "status": "COMPLETE", "methodology": "Feature count at 3 grid resolutions", "resolutions": {"64x64": 328, "128x128": 1328, "256x256": 5742}, "convergence": "NO CONVERGENCE — count grows as resolution²", "conclusion": "Not resolution-convergent — artifact"}

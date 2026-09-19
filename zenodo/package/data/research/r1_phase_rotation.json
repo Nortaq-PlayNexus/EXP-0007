@@ -1,0 +1,21 @@
+{
+  "experiment": "Phase Rotation Invariance",
+  "shifts_degrees": [
+    0,
+    22,
+    45,
+    90,
+    180,
+    135
+  ],
+  "winding_counts": [
+    89,
+    89,
+    89,
+    89,
+    89,
+    89
+  ],
+  "variation": 0,
+  "verdict": "INVARIANT"
+}

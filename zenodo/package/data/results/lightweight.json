@@ -1,0 +1,10 @@
+{
+  "z0_dbs": 48,
+  "z1280_physical_dbs": 113,
+  "z1280_physical_call": "z=-1280 (D1 bug sign flip)",
+  "z_minus1280_physical_dbs": 47,
+  "z_minus1280_physical_call": "z=+1280 (D1 bug sign flip)",
+  "reproducible": true,
+  "ncc_plus_minus": "~1.0 (sign bug confirmation)",
+  "note": "D1 bug: project propagate_fresnel propagates in -z direction. Call z=-1280 for physical +z result."
+}

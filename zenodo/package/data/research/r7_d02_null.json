@@ -1,0 +1,26 @@
+{
+  "experiment": "D02 Null with Grid-Converged Detector",
+  "seeds": [
+    42,
+    7,
+    123
+  ],
+  "results": {
+    "seed_42": {
+      "lattice": 7183,
+      "d02_null": 56863,
+      "excess": -49680
+    },
+    "seed_7": {
+      "lattice": 7183,
+      "d02_null": 56769,
+      "excess": -49586
+    },
+    "seed_123": {
+      "lattice": 7183,
+      "d02_null": 56862,
+      "excess": -49679
+    }
+  },
+  "timestamp": "2026-09-19T19:11:47.640345"
+}
