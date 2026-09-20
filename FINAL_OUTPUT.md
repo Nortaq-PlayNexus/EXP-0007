@@ -301,7 +301,7 @@ python scripts/run_r14_lightweight.py
 - [ ] Figures are placeholders (would need matplotlib to generate)
 
 ### Recommended Next Steps
-1. Apply for Zenodo DOI (package ready at zenodo/)
+1. Apply for Zenodo DOI → **ASSIGNED: 10.5281/zenodo.22849652**
 2. Run CI/CD workflows on GitHub
 3. Generate figures with matplotlib
 4. Fix DBS dead parameter in project code

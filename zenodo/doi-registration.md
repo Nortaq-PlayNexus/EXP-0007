@@ -5,7 +5,7 @@
 | Field | Value |
 |-------|-------|
 | Deposit ID | (assigned by Zenodo) |
-| DOI | 10.5281/zenodo.(assigned) |
+| DOI | 10.5281/zenodo.22849652 |
 | Title | EXP-0007: Coherent Optical Vortex Propagation — R14 Validation Study |
 | Upload type | Dataset |
 | Version | 1.1.0 |

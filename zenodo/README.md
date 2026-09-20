@@ -9,7 +9,7 @@
 | Subtitle | Systematic investigation of propagation-generated topological vortex structures with full bug verification and artifact analysis |
 | Version | v1.1.0 |
 | Publication date | 2026-09-19 |
-| DOI | (to be assigned by Zenodo) |
+| DOI | 10.5281/zenodo.22849652 |
 | Description | See description/abstract below |
 
 ## Creators
