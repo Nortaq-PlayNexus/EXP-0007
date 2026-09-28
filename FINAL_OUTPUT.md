@@ -285,11 +285,13 @@ python scripts/run_r14_lightweight.py
 - [x] Data provenance documented
 - [x] All documentation complete (25+ files)
 - [x] Release package prepared at release/r14/
-- [x] Git repository initialized (2 commits)
+- [x] Zenodo package prepared at zenodo/ (54 files, 64.9 KB zip)
+- [x] Git repository initialized (3 commits)
 - [x] Pushed to GitHub (github.com/Nortaq-PlayNexus/EXP-0007)
 - [x] CITATION.cff created (no fabricated metadata)
 - [x] LICENSE chosen (MIT)
-- [x] Zenodo preparation documented
+- [x] Zenodo package ready for upload
+- [x] DOI registration form completed (zenodo/doi-registration.md)
 - [x] No hardcoded secrets or credentials
 - [x] No fabricated DOI numbers
 - [x] Scientific claims not oversold
@@ -299,10 +301,9 @@ python scripts/run_r14_lightweight.py
 - [ ] Figures are placeholders (would need matplotlib to generate)
 
 ### Recommended Next Steps
-1. Run CI/CD workflows on GitHub
-2. Generate figures with matplotlib
-3. Fix DBS dead parameter in project code
-4. Characterize 65 propagation features
-5. Re-run R11/R12 with corrected MethodB
-6. Apply for Zenodo DOI
-7. Explore 6 propagation-generated features (F1-F6)
+1. Apply for Zenodo DOI (package ready at zenodo/)
+2. Run CI/CD workflows on GitHub
+3. Generate figures with matplotlib
+4. Fix DBS dead parameter in project code
+5. Characterize 65 propagation features (F1-F6)
+6. Re-run R11/R12 with corrected MethodB
