@@ -1,0 +1,225 @@
+{
+  "created": "2026-09-20T01:13:58.742075",
+  "repo_commit": "1ef180d",
+  "zenodo_upload_type": "dataset",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 166
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 3762
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 822
+    },
+    {
+      "path": "environment.yml",
+      "size_bytes": 165
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1078
+    },
+    {
+      "path": "metadata.json",
+      "size_bytes": 628
+    },
+    {
+      "path": "METHODS.md",
+      "size_bytes": 2631
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 483
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 7111
+    },
+    {
+      "path": "REPRODUCIBILITY.md",
+      "size_bytes": 3733
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 46
+    },
+    {
+      "path": "RESULTS.md",
+      "size_bytes": 4798
+    },
+    {
+      "path": "data\\research\\CONTINUATION_FINAL.json",
+      "size_bytes": 2376
+    },
+    {
+      "path": "data\\research\\r11_dbs_fix.json",
+      "size_bytes": 367
+    },
+    {
+      "path": "data\\research\\r13_forensic_results.csv",
+      "size_bytes": 815
+    },
+    {
+      "path": "data\\research\\r14_summary.json",
+      "size_bytes": 2091
+    },
+    {
+      "path": "data\\research\\r1_phase_rotation.json",
+      "size_bytes": 262
+    },
+    {
+      "path": "data\\research\\r2_aperture_scaling.json",
+      "size_bytes": 273
+    },
+    {
+      "path": "data\\research\\r7_d02_null.json",
+      "size_bytes": 476
+    },
+    {
+      "path": "data\\research\\r9_orientation.json",
+      "size_bytes": 342
+    },
+    {
+      "path": "data\\research\\README.md",
+      "size_bytes": 2224
+    },
+    {
+      "path": "data\\results\\definitive.json",
+      "size_bytes": 198
+    },
+    {
+      "path": "data\\results\\DEFINITIVE_DBS_TEST.json",
+      "size_bytes": 579
+    },
+    {
+      "path": "data\\results\\detector_validation.json",
+      "size_bytes": 738
+    },
+    {
+      "path": "data\\results\\lightweight.json",
+      "size_bytes": 394
+    },
+    {
+      "path": "data\\results\\null_distribution.json",
+      "size_bytes": 331
+    },
+    {
+      "path": "data\\results\\phase_results.json",
+      "size_bytes": 942
+    },
+    {
+      "path": "data\\results\\resolution_convergence.json",
+      "size_bytes": 329
+    },
+    {
+      "path": "data\\results\\threshold_sweep.json",
+      "size_bytes": 341
+    },
+    {
+      "path": "data\\results\\z_sweep.json",
+      "size_bytes": 463
+    },
+    {
+      "path": "docs\\bug-history.md",
+      "size_bytes": 6085
+    },
+    {
+      "path": "docs\\d1-bug-effect.md",
+      "size_bytes": 2917
+    },
+    {
+      "path": "docs\\definitive-test-proposal.md",
+      "size_bytes": 4551
+    },
+    {
+      "path": "docs\\detector-analysis.md",
+      "size_bytes": 3383
+    },
+    {
+      "path": "docs\\detector-improvement.md",
+      "size_bytes": 5476
+    },
+    {
+      "path": "docs\\experiment-overview.md",
+      "size_bytes": 1401
+    },
+    {
+      "path": "docs\\final-interpretation.md",
+      "size_bytes": 5571
+    },
+    {
+      "path": "docs\\future-experiments.md",
+      "size_bytes": 8022
+    },
+    {
+      "path": "docs\\mathematical-background.md",
+      "size_bytes": 4361
+    },
+    {
+      "path": "docs\\propagation-features-analysis.md",
+      "size_bytes": 4716
+    },
+    {
+      "path": "docs\\propagation-implementation.md",
+      "size_bytes": 4397
+    },
+    {
+      "path": "docs\\r14-validation.md",
+      "size_bytes": 5154
+    },
+    {
+      "path": "docs\\what-we-know-dont-know.md",
+      "size_bytes": 9334
+    },
+    {
+      "path": "scripts\\numerical_consistency_check.py",
+      "size_bytes": 2843
+    },
+    {
+      "path": "scripts\\qa_check.py",
+      "size_bytes": 5214
+    },
+    {
+      "path": "scripts\\run_r14.py",
+      "size_bytes": 6101
+    },
+    {
+      "path": "scripts\\run_r14_lightweight.py",
+      "size_bytes": 2559
+    },
+    {
+      "path": "scripts\\validate_environment.py",
+      "size_bytes": 1166
+    },
+    {
+      "path": "tests\\test_detector.py",
+      "size_bytes": 2545
+    },
+    {
+      "path": "tests\\test_field_construction.py",
+      "size_bytes": 1834
+    },
+    {
+      "path": "tests\\test_propagation.py",
+      "size_bytes": 1988
+    },
+    {
+      "path": "tests\\test_regression.py",
+      "size_bytes": 2933
+    },
+    {
+      "path": "tests\\test_reproducibility.py",
+      "size_bytes": 2932
+    },
+    {
+      "path": "tests\\test_winding.py",
+      "size_bytes": 3550
+    }
+  ],
+  "total_size_bytes": 137997,
+  "total_files": 54
+}

@@ -1,0 +1,18 @@
+experiment,dbs,winding,difference,dbs_recovery_pct,notes
+baseline,113,7183,7070,,
+D1_fix,150,4067,3917,0.52,propagation sign fix
+D2_fix_I<0.5,782,7183,6401,,intensity filter (Phase 3)
+D2_fix_I<0.3,770,7183,6413,,intensity filter (Phase 3)
+D2_fix_I<0.1,614,7183,6569,,intensity filter (Phase 3)
+D3_fix,113,7183,7070,,no effect on counts
+D4_fix,113,7183,7070,,no effect on R13
+D5_fix,113,7183,7070,,no effect on R13
+D6_fix_padded,133,5192,5059,0.28,zero-padded propagation
+cumulative_experiment,dbs,winding,difference,dbs_recovery_pct,notes
+baseline,113,7183,7070,,
+D1,150,4067,3917,,
+D2_only_filter,782,7183,6401,,broken prop + intensity filter (Phase 3)
+D6,133,5192,5059,,
+D1+D2,150,4067,3917,,D1 dominates D2
+D2+D6,782,5192,4410,,D2 dominates D6
+D1+D2+D6,150,4067,3917,,D1+D2+D6 same as D1 alone

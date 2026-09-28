@@ -1,0 +1,1 @@
+{"experiment": "R14 Null Distribution", "date": "2026-09-19", "status": "COMPLETE", "methodology": "100 random phase fields", "metrics": {"mean_random_count": 21670, "median": 21664, "std": 118, "range": [21375, 21939], "113_at_percentile": 0.0}, "conclusion": "113 is at 0th percentile of null distribution — far below random"}

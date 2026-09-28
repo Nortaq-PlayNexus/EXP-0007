@@ -1,0 +1,65 @@
+{
+  "upload_type": "dataset",
+  "title": "EXP-0007: Coherent Optical Vortex Propagation — R14 Validation Study",
+  "subtitle": "Systematic investigation of propagation-generated topological vortex structures with full bug verification and artifact analysis",
+  "version": "1.1.0",
+  "publication_date": "2026-09-19",
+  "description": "This dataset contains the complete results of EXP-0007, a systematic investigation of whether coherent optical propagation through free space generates novel topological vortex structures beyond those present in the initial field. The study propagated a 256×256 pixel simulation of a laser beam containing an 8×6 vortex lattice (48 design vortices) to z=+1280 µm and measured feature counts using the DeepBeamScan (DBS) detector.\n\nThe apparent 113-vortex population at z=+1280 (vs. 48 at z=0) was initially reported as a +135% increase, suggesting propagation-generated vortex creation. However, R14 validation (24 phases) determined this result is a systematic detector + grid-locking artifact, not physical vortex creation.\n\nKey findings documented in this dataset:\n1. The 113 features at z=+1280 are reproducible but topologically meaningless artifacts\n2. A double-np.angle software bug in winding_count() invalidated all R13-based MethodB conclusions (7,183 → 113)\n3. A propagation sign bug (D1) in the project's propagate_fresnel function produces measurable, reproducible directional effects (47 vs 113 at |z|=1280 depending on sign)\n4. The detector cannot preserve known topology (overcounts 9-19x on known vortices, misses vortex pairs entirely)\n5. Feature counts are chaotic across propagation distances (7 discontinuities in z-sweep)\n6. 113 is at the 0th percentile of random field null distribution (21,670 mean)\n\nThis dataset includes all raw data, processed results, validation scripts, test suites, bug analyses, and complete documentation for full reproducibility.",
+  "keywords": [
+    "coherent optics",
+    "optical vortices",
+    "vortex lattice",
+    "Fresnel propagation",
+    "DeepBeamScan",
+    "feature detection",
+    "detector artifact",
+    "grid-locking",
+    "reproducibility",
+    "simulation",
+    "topological structure",
+    "phase singularities",
+    "z-sweep",
+    "bug verification",
+    "D1 propagation bug",
+    "double-np.angle",
+    "simulation data"
+  ],
+  "creators": [
+    {
+      "name": "EXP-0007 Research Team",
+      "affiliation": "Scientific Discovery Lab",
+      "orcid": ""
+    }
+  ],
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Nortaq-PlayNexus/EXP-0007",
+      "relation": "isSupplementTo",
+      "resource_type": "repository"
+    }
+  ],
+  "access_right": "open",
+  "language": "en",
+  "subject": [
+    "Physics",
+    "Optics",
+    "Computer Science"
+  ],
+  "contributors": [],
+  "alternate_identifiers": [],
+  "sources": [],
+  "size": "0.20 MB",
+  "number_of_files": 92,
+  "technical_methods": [
+    "Vortex crystal field construction: vortex_crystal_field(shape=(256,256), rows=6, cols=8)",
+    "Fresnel propagation with NCC verification",
+    "DeepBeamScan phase singularity detection",
+    "Winding number analysis with bug correction",
+    "24-phase R14 validation protocol"
+  ],
+  "data_collection": "Simulation data generated using Python 3.14.7, NumPy 2.5.3, SciPy 1.18.1. All results are deterministic and reproducible via scripts/run_r14.py.",
+  "geographic_coverage": "",
+  "temporal_coverage": "2026-09-19",
+  "note": "Zenodo metadata template for EXP-0007 R14 validation dataset"
+}

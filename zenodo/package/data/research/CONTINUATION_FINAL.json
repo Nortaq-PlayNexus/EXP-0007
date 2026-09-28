@@ -1,0 +1,116 @@
+{
+  "r1_phase_rotation_preliminary": {
+    "verdict": "INVARIANT",
+    "variation": 0,
+    "note": "Used simplified 5x7 lattice; R5 uses project's exact 48-vortex lattice"
+  },
+  "r2_aperture_scaling": {
+    "counts": [
+      240,
+      180,
+      148,
+      117,
+      89
+    ],
+    "apertures_um": [
+      128,
+      192,
+      256,
+      384,
+      512
+    ],
+    "trend": "MONOTONIC DECREASE with grid size"
+  },
+  "r3_random_mechanism": {
+    "random_counts": "87000+",
+    "lattice_counts": "~89",
+    "ratio": "~1000x",
+    "note": "Random fields produce ~1000x more phase singularities"
+  },
+  "r4_grid_convergence": {
+    "counts": [
+      204,
+      240,
+      148,
+      89
+    ],
+    "grids": [
+      "64",
+      "128",
+      "256",
+      "512"
+    ],
+    "trend": "DECREASES with grid size (same direction as EXP-2C)"
+  },
+  "r5_phase_rotation_project": {
+    "experiment": "Project-Exact Phase Rotation",
+    "independent_winding_counts": [
+      21214,
+      21344,
+      20827,
+      17686,
+      8513
+    ],
+    "independent_variation": 12831,
+    "project_dbs_counts": [
+      1578,
+      1673,
+      1632,
+      710,
+      34
+    ],
+    "project_variation": 1639,
+    "independent_verdict": "VARIANT"
+  },
+  "r6_grid_converged": {
+    "experiment": "Grid-Converged Detector at z=1280",
+    "grids": [
+      128,
+      256,
+      512
+    ],
+    "results": {
+      "grid_128": {
+        "independent_winding": 1326,
+        "project_dbs": 28,
+        "charge": -1329
+      },
+      "grid_256": {
+        "independent_winding": 5150,
+        "project_dbs": 128,
+        "charge": -5157
+      },
+      "grid_512": {
+        "independent_winding": 18930,
+        "project_dbs": 334,
+        "charge": -18955
+      }
+    }
+  },
+  "r7_d02_null": {
+    "experiment": "D02 Null with Grid-Converged Detector",
+    "seeds": [
+      42,
+      7,
+      123
+    ],
+    "results": {
+      "seed_42": {
+        "lattice": 7183,
+        "d02_null": 56863,
+        "excess": -49680
+      },
+      "seed_7": {
+        "lattice": 7183,
+        "d02_null": 56769,
+        "excess": -49586
+      },
+      "seed_123": {
+        "lattice": 7183,
+        "d02_null": 56862,
+        "excess": -49679
+      }
+    },
+    "timestamp": "2026-09-19T19:11:47.640345"
+  }
+}
