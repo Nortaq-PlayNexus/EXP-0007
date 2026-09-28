@@ -31,7 +31,8 @@
       "orcid": ""
     }
   ],
-  "license": "MIT",
+   "doi": "10.5281/zenodo.22849652",
+   "license": "MIT",
   "related_identifiers": [
     {
       "identifier": "https://github.com/Nortaq-PlayNexus/EXP-0007",
