@@ -1,0 +1,18 @@
+{
+  "experiment": "DBS Fix Verification",
+  "broken_count": 7844,
+  "fixed_count_002": 6558,
+  "ratio": 1.1960963708447698,
+  "prominence_sweep": {
+    "0.001": 6558,
+    "0.005": 6558,
+    "0.01": 6558,
+    "0.02": 6558,
+    "0.05": 6558,
+    "0.1": 6558,
+    "0.2": 6558,
+    "0.5": 6558,
+    "1.0": 6558
+  },
+  "verdict": "FIXED CHANGES COUNT"
+}

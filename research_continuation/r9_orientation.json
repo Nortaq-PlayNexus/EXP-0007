@@ -1,0 +1,23 @@
+{
+  "experiment": "Lattice Orientation Test",
+  "orientations": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90
+  ],
+  "counts": {
+    "0": 7844,
+    "15": 15166,
+    "30": 15310,
+    "45": 15598,
+    "60": 16537,
+    "75": 15702,
+    "90": 7816
+  },
+  "variation": 8721,
+  "verdict": "ORIENTATION DEPENDENT"
+}

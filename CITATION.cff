@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as follows."
+title: "EXP-0007: Coherent Optical Vortex Propagation Study"
+version: "1.0.0-r14"
+date-released: 2026-09-19
+author:
+  - family-names: "EXP-0007 Contributors"
+    orcid: ""
+abstract: >
+  A systematic investigation of whether coherent optical propagation generates
+  novel topological structure (vortices). The study found that the apparent
+  113-vortex population at z=+1280 is a detector + grid-locking artifact, not
+  physical vortex creation. All data, code, and validation results are
+  provided for full reproducibility.
+keywords:
+  - optical vortices
+  - coherent optics
+  - propagation
+  - feature detection
+  - grid-locking
+  - detector artifact
+  - reproducibility
+repository-code: "https://github.com/<username>/EXP-0007"
+doi: ""

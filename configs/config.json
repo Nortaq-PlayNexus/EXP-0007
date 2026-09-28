@@ -1,0 +1,35 @@
+{
+  "project": "EXP-0007",
+  "version": "1.0.0-r14",
+  "configVersion": "1.0",
+  "description": "EXP-0007 experiment configurations",
+  "field": {
+    "wavelength_nm": 694.3,
+    "pixel_size_um": 1.0,
+    "grid_shape": [256, 256],
+    "lattice_rows": 6,
+    "lattice_cols": 8,
+    "design_vortices": 48
+  },
+  "propagation": {
+    "z_um": 1280,
+    "methods": ["fresnel", "angular_spectrum"],
+    "boundary": "cyclic",
+    "padding_factor": 1
+  },
+  "detector": {
+    "name": "DeepBeamScan",
+    "threshold": 0.5,
+    "min_prominence": 0.02,
+    "min_prominence_active": false
+  },
+  "seed": 42,
+  "validation": {
+    "z_sweep": [-2560, -1920, -1280, -640, -320, -160, -80, 0, 80, 160, 320, 640, 960, 1280, 1920, 2560],
+    "resolutions": [64, 128, 256, 512],
+    "orientations": [0, 15, 30, 45, 60, 75, 90],
+    "wavelengths": [405, 532, 633, 694.3, 780],
+    "thresholds": [0.0001, 0.0005, 0.001, 0.002, 0.005, 0.01, 0.02],
+    "random_trials": 100
+  }
+}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "exp-0007"
+version = "1.0.0-r14"
+description = "EXP-0007: Coherent optical vortex propagation study"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.5.0",
+    "scipy>=1.18.0",
+    "matplotlib>=3.11.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "flake8>=6.0",
+    "black>=23.0",
+    "mypy>=1.5",
+]
