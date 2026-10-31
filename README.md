@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281%2Fzenodo.22849652.svg)](https://doi.org/10.5281/zenodo.22849652)
+
 # EXP-0007 — Coherent Optical Vortex Propagation Study
 
 > **Research status: R14 validation completed. The original apparent vortex-creation observation was not validated as physical vortex creation. Controlled experiments indicate detector, grid, and propagation-method artifacts.**
