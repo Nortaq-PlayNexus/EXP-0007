@@ -42,14 +42,13 @@ class TestDataSchema:
         assert "verdict" in data["R14"]
         assert "phases" in data["R14"]
 
-    def test_FINAL_MANIFEST_structure(self):
+    def test_continuation_final_structure(self):
         import json
-        path = os.path.join(os.path.dirname(__file__), "..", "research_continuation", "FINAL_MANIFEST.json")
+        path = os.path.join(os.path.dirname(__file__), "..", "research_continuation", "CONTINUATION_FINAL.json")
         with open(path) as f:
             data = json.load(f)
-        assert "project" in data
-        assert "key_findings" in data
-        assert "status" in data
+        assert "r1_phase_rotation_preliminary" in data
+        assert isinstance(data["r1_phase_rotation_preliminary"]["verdict"], str)
 
     def test_all_required_docs_exist(self):
         import os

@@ -1,190 +1,54 @@
-# REPRODUCIBILITY — EXP-0007
+# Reproducing and inspecting EXP-0007
 
-## How to Reproduce
+## Scope
 
-### 1. Clone the Repository
+The archived R14 records are historical evidence, not results computed during installation or CI. This checkout does not contain the original app.optics implementation. Its full simulation tests need that external sandbox. No fresh physical finding is claimed here.
+
+## Install the analysis environment
+
+Use Python 3.12 or later. From this repository:
 
 ```bash
-git clone https://github.com/<username>/EXP-0007.git
-cd EXP-0007
-```
-
-### 2. Install Dependencies
-
-```powershell
-pip install -r requirements.txt
-```
-
-Or with conda:
-
-```powershell
-conda env create -f environment.yml
-conda activate exp-0007
-```
-
-### 3. Validate Environment
-
-```powershell
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# Linux/macOS: source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pip install pytest
 python scripts/validate_environment.py
 ```
 
-This checks:
-- Python version (≥3.10)
-- NumPy version
-- SciPy version
-- Matplotlib version
-- Required packages
-
-### 4. Reproduce R14 (Full)
-
-```powershell
-python scripts/run_r14.py
-```
-
-This will:
-1. Validate environment
-2. Load configuration
-3. Run R14 experiments
-4. Generate derived data
-5. Generate figures
-6. Generate summary report
-
-### 5. Reproduce R14 (Lightweight Validation)
-
-```powershell
-python scripts/run_r14.py --lightweight
-```
-
-Runs a subset of R14 phases for quick validation (~5 minutes).
-
-### 6. Run Individual Phases
-
-```powershell
-# Run threshold sensitivity test
-python scripts/run_r14.py --phase threshold
-
-# Run resolution convergence test
-python scripts/run_r14.py --phase resolution
-
-# Run detector validation
-python scripts/run_r14.py --phase detector
-
-# Run null tests
-python scripts/run_r14.py --phase null
-```
-
-### 7. Inspect Raw Data
-
-```powershell
-# View R14 summary
-cat results/r14/summary.json
-
-# View phase results
-cat results/r14/phase_*.json
-
-# View raw research data (preserved from original)
-cat research_continuation/r14_summary.json
-```
-
-### 8. Reproduce Figures
-
-```powershell
-python scripts/reproduce_figures.py
-```
-
-### 9. Compare with Published Results
-
-```powershell
-python scripts/generate_report.py --compare
-```
-
-## Platform-Specific Instructions
-
-### Windows
-
-```powershell
-# Ensure Python is in PATH
-python --version
-pip --version
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run reproduction (full)
-python scripts/run_r14.py
-
-# Run reproduction (lightweight, ~5 minutes)
-python scripts/run_r14_lightweight.py
-
-# Validate environment
-python scripts/validate_environment.py
-
-# Run QA check
-python scripts/qa_check.py
-
-# Check numerical consistency
-python scripts/numerical_consistency_check.py
-
-# Generate figures
-python scripts/reproduce_figures.py
-
-# Generate report
-python scripts/generate_report.py
-```
-
-### Linux/macOS
+## Checks available in this checkout
 
 ```bash
-python3 --version
-pip3 --version
-
-pip install -r requirements.txt
-
-# Run reproduction (full)
-python3 scripts/run_r14.py
-
-# Run reproduction (lightweight, ~5 minutes)
-python3 scripts/run_r14_lightweight.py
-
-# Validate environment
-python3 scripts/validate_environment.py
-
-# Run QA check
-python3 scripts/qa_check.py
-
-# Check numerical consistency
-python3 scripts/numerical_consistency_check.py
-
-# Set project path if needed
-export EXP0007_PROJECT="/path/to/project"
+python -m pytest tests/test_reproducibility.py tests/test_validation_entrypoints.py -q
 ```
 
-## Reproduction Results (Verified)
+These check environment availability, record structure and command failure behavior. They do not establish optical reproduction. Other tests import the external app.optics code; run them only after configuring that prerequisite.
 
-| Command | Expected Output | Actual | Status |
-|---------|----------------|--------|--------|
-| `python scripts/validate_environment.py` | "ENVIRONMENT VALIDATED" | PASS | ✓ |
-| `python scripts/run_r14.py` | z=0: 48, z=+1280: 113 | PASS | ✓ |
-| `python scripts/run_r14_lightweight.py` | z=0: 48, z=+1280: 113 | PASS | ✓ |
-| `python scripts/qa_check.py` | "QA RESULT: PASS" | PASS (warnings) | ✓ |
-| `python scripts/numerical_consistency_check.py` | Key values found | 48(30), 113(34), etc. | ✓ |
+## Full historical runner
 
-## Requirements
+Obtain the original coherent-optical-ai-sandbox source independently and record its exact commit. This repository does not supply or pin it. Set EXP0007_PROJECT to its root (the directory containing app/optics), then run:
 
-- Python ≥3.10
-- NumPy ≥1.24
-- SciPy ≥1.11
-- Matplotlib ≥3.7
+```powershell
+$env:EXP0007_PROJECT = 'C:\path\to\coherent-optical-ai-sandbox'
+python scripts/run_r14.py --output r14-reproduction.json
+```
 
-See `requirements.txt` and `pyproject.toml` for exact versions.
+On Linux/macOS:
 
-## Configuration
+```bash
+export EXP0007_PROJECT=/path/to/coherent-optical-ai-sandbox
+python scripts/run_r14.py --output r14-reproduction.json
+```
 
-Experiment parameters are centralized in `configs/`. Do not scatter magic numbers in scripts.
+The output path is resolved before the runner changes directory. Existing files are refused, preserving archived outputs. Use a fresh filename for each run. Record both source commits, dependency versions and the complete console output alongside it.
 
-Key parameters:
-- Wavelength: 694.3 nm
-- Grid size: 256 × 256
-- Pixel size: 1 µm
-- Propagation distance: 1280 µm
-- Random seed: 42
+The runner computes detector counts and repeated runs, but also prints historical sign-convention commentary. Its NCC string and dead-threshold flag are not independently measured by that runner. Its count assertions do not establish physical vortex creation. Evaluate these limitations before interpreting the output.
+
+## Retired lightweight command
+
+scripts/run_r14_lightweight.py previously printed fixed counts and wrote reproducible=true without running the optical model. It now exits 2 and writes nothing. The old output is retained in the historical record; it is not independent verification. The full runner rejects unsupported --lightweight and --phase options instead of silently ignoring them.
+
+## Preserved evidence
+
+Read research_continuation/, results/r14/, METHODS.md, RESULTS.md and docs/limitations.md together. Do not overwrite them with a fresh run. The original apparent vortex-creation interpretation remains unvalidated.

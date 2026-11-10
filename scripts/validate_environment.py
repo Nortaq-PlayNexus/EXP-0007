@@ -6,14 +6,14 @@ def validate():
     errors = []
     
     # Python version
-    if sys.version_info < (3, 10):
-        errors.append(f"Python >= 3.10 required, got {sys.version}")
+    if sys.version_info < (3, 12):
+        errors.append(f"Python >= 3.12 required, got {sys.version}")
     
     # Required packages
     required = [
-        ("numpy", "1.24"),
-        ("scipy", "1.11"),
-        ("matplotlib", "3.7"),
+        ("numpy", "2.5.0"),
+        ("scipy", "1.18.0"),
+        ("matplotlib", "3.11.0"),
     ]
     
     for name, min_ver in required:
@@ -25,7 +25,7 @@ def validate():
         except ImportError:
             errors.append(f"{name} not installed")
         except Exception as e:
-            pass  # packaging might not be available, just check it exists
+            errors.append(f"Could not validate {name}: {e}")
     
     if errors:
         print("ENVIRONMENT VALIDATION FAILED:")

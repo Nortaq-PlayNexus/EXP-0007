@@ -2,11 +2,22 @@
 """Run all R14 validation phases with corrected MethodB."""
 import numpy as np
 import os, sys, json
+import argparse
+
+parser = argparse.ArgumentParser(description="Run R14 against the external optical sandbox")
+parser.add_argument("--output", default="r14-reproduction.json", help="New output file; existing files are never overwritten")
+args = parser.parse_args()
+output_path = os.path.abspath(args.output)
+if os.path.exists(output_path):
+    parser.error(f"Output already exists: {output_path}")
 
 PROJECT = os.environ.get("EXP0007_PROJECT", r"C:\Users\natha\code\coherent-optical-ai-sandbox")
+if not os.path.isdir(PROJECT):
+    print("R14 reproduction NOT RUN: set EXP0007_PROJECT to the original optical sandbox directory.", file=sys.stderr)
+    sys.exit(2)
 sys.path.insert(0, PROJECT)
 sys.path.insert(0, os.path.join(PROJECT, "app"))
-os.environ['PYTHONPATH'] = PROJECT + ";" + os.environ.get('PYTHONPATH', '')
+os.environ['PYTHONPATH'] = PROJECT + os.pathsep + os.environ.get('PYTHONPATH', '')
 os.chdir(PROJECT)
 
 from app.optics.structured_light import vortex_crystal_field
@@ -107,9 +118,9 @@ def main():
     print(f"  find_features() with and without threshold: {len(feats_no_param)} == {len(feats_with_param)}")
     results["dbs_dead_threshold"] = True
 
-    out = os.path.join(os.path.dirname(__file__), "..", "results", "r14", "definitive.json")
+    out = output_path
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    with open(out, "w") as f:
+    with open(out, "x") as f:
         json.dump(results, f, indent=2)
     print(f"\nResults saved to {out}")
 
