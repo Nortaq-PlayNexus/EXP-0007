@@ -11,7 +11,6 @@
 ![Python](https://img.shields.io/badge/Python-3.14+-blue)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![DOI](https://img.shields.io/badge/DOI-10.5281--zenodo.22849652-orange)
-![CI](https://github.com/placeholder/EXP-0007/workflows/CI/badge.svg?branch=main)](https://github.com/placeholder/EXP-0007)
 
 ---
 
