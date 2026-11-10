@@ -7,8 +7,8 @@
 ---
 
 ![Research Status](https://img.shields.io/badge/Research%20Status-R14%20Complete-blue)
-![Reproducibility](https://img.shields.io/badge/Reproducibility-Verified-brightgreen)
-![Python](https://img.shields.io/badge/Python-3.14+-blue)
+![Reproduction](https://img.shields.io/badge/Reproduction-external%20source%20required-ffc430)
+![Python](https://img.shields.io/badge/Python-3.12+-blue)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![DOI](https://img.shields.io/badge/DOI-10.5281--zenodo.22849652-orange)
 
@@ -78,41 +78,21 @@ The 113 candidates are **real phase singularities** in the propagated field, but
 
 ## Can someone reproduce it?
 
-Yes. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for exact instructions.
+This repository preserves the study records and analysis scripts. Full R14 execution requires the original optical sandbox, which is not included here. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for the available checks and the missing prerequisite.
 
-**One-command reproduction:**
-```bash
-python scripts/run_r14.py
-```
+The former lightweight command printed fixed historical counts. It was not a reproduction and now exits with a nonzero status without writing results. Archived records are preserved unchanged.
 
-**Lightweight validation (5 minutes):**
-```bash
-python scripts/validate_environment.py && python scripts/run_r14.py --lightweight
-```
+## Where are the data and code?
 
-## Where is the data?
-
-| Type | Location |
-|------|----------|
-| Raw data | `data/raw/` |
-| Processed data | `data/processed/` |
-| Validation data | `data/validation/` |
-| R14 results | `results/r14/` |
-| Raw research data (preserved) | `research_continuation/` |
-| Archive (superseded/defects) | `archive/` |
-
-## Where is the code?
-
-| Type | Location |
-|------|----------|
-| Propagation implementation | `src/propagation/` |
-| Detector implementation | `src/detection/` |
-| Validation scripts | `src/validation/` |
-| Analysis tools | `src/analysis/` |
-| Visualization | `src/visualization/` |
-| One-command scripts | `scripts/` |
-| Configurations | `configs/` |
-| Tests | `tests/` |
+| Contents | Location |
+| --- | --- |
+| Historical R14 outputs | [results/r14/](results/r14/) |
+| Research records | [research_continuation/](research_continuation/) |
+| Superseded records and defects | [archive/](archive/) |
+| Entry points and analysis tools | [scripts/](scripts/) |
+| Configurations | [configs/](configs/) |
+| Tests | [tests/](tests/) |
+| Optical model and detector | External sandbox selected by EXP0007_PROJECT |
 
 ## What is the current conclusion?
 

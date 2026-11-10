@@ -2,7 +2,7 @@ name: exp-0007
 channels:
   - conda-forge
 dependencies:
-  - python>=3.10
+  - python>=3.12
   - numpy>=2.5.0
   - scipy>=1.18.0
   - matplotlib>=3.11.0
